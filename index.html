@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWPPLE — Think differenter.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            hand: ['"Caveat"', 'cursive'],
+          },
+          colors: {
+            awpple: {
+              black: '#050505',
+              card: '#0d0d0d',
+              cardBorder: '#1c1c1c',
+              dim: '#6b6b6b',
+              red: '#ff3b30'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #050505;
+      color: #f5f5f7;
+      overflow-x: hidden;
+    }
+    .glow-radial {
+      background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 70%);
+    }
+    .spec-line:hover .crossed {
+      text-decoration: line-through;
+      opacity: 0.4;
+    }
+    .hand-annotation {
+      font-family: 'Caveat', cursive;
+      color: #ff453a;
+      transform: rotate(-3deg);
+    }
+  </style>
+</head>
+<body class="font-sans antialiased selection:bg-white selection:text-black">
+
+  <!-- Apple Keynote Inspired Ultra-Minimal Nav -->
+  <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-black/65 border-b border-white/10 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 h-12 flex items-center justify-between text-xs tracking-tight text-neutral-400">
+      <div class="flex items-center space-x-8">
+        <a href="#hero" class="flex items-center space-x-2 text-white font-bold text-sm tracking-wider hover:opacity-80 transition">
+          <span class="text-base text-red-500"></span>
+          <span>AWPPLE</span>
+        </a>
+        <nav class="hidden md:flex items-center space-x-6">
+          <a href="#keynote" class="hover:text-white transition">Keynote</a>
+          <a href="#awphone" class="hover:text-white transition">awPhone</a>
+          <a href="#awfold" class="hover:text-white transition">awFold</a>
+          <a href="#awtv" class="hover:text-white transition">awTV</a>
+          <a href="#awpods" class="hover:text-white transition">awPods</a>
+          <a href="#awintelligence" class="hover:text-white transition">Intelligence</a>
+          <a href="#token" class="hover:text-white transition">$AWPPLE</a>
+        </nav>
+      </div>
+      <div class="flex items-center space-x-4">
+        <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="px-3 py-1 rounded-full bg-white/10 hover:bg-white/20 text-white font-medium transition flex items-center space-x-1.5 border border-white/5">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <span>Twitter / X</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="min-h-screen relative flex flex-col items-center justify-center pt-24 pb-16 px-6 text-center glow-radial">
+    <div class="max-w-4xl mx-auto flex flex-col items-center">
+      <div class="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-widest uppercase bg-neutral-900 border border-neutral-800 rounded-full text-neutral-400">
+        Special Event Keynote 2025
+      </div>
+      <h1 class="text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter text-white mb-6">
+        Think differenter.
+      </h1>
+      <p class="text-xl md:text-2xl text-neutral-400 max-w-xl mb-10 font-normal leading-relaxed">
+        Apple has the keynote.<br>
+        <span class="text-neutral-100 font-medium">We have AWPPLE.</span>
+      </p>
+
+      <!-- Hero Character Cinematic Reveal -->
+      <div class="relative group my-4 cursor-pointer" onclick="toggleHeroEyes()">
+        <div class="w-64 h-64 md:w-80 md:h-80 relative flex items-center justify-center transition-transform duration-700 group-hover:scale-105">
+          <!-- Spotlight lighting -->
+          <div class="absolute inset-0 rounded-full bg-radial from-red-600/20 via-neutral-900/40 to-transparent blur-2xl opacity-60 group-hover:opacity-100 transition duration-700"></div>
+          <img src="images/awpple-mascot.png" alt="AWPPLE Mascot" class="relative z-10 w-full h-full object-contain filter drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)] transition duration-500">
+        </div>
+        <div class="text-[11px] font-mono tracking-widest text-neutral-600 mt-2 uppercase">
+          CEO / Lead Hardware Engineer / Fruit
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center gap-4 mt-8">
+        <a href="#keynote" class="px-7 py-3 rounded-full bg-white text-black font-semibold text-sm hover:bg-neutral-200 transition shadow-lg shadow-white/5">
+          View The Keynote
+        </a>
+        <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="px-7 py-3 rounded-full bg-neutral-900 border border-neutral-800 text-neutral-300 font-semibold text-sm hover:bg-neutral-800 hover:text-white transition flex items-center gap-2">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <span>Follow @AWPPLE</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Keynote Auditorium Stage Section -->
+  <section id="keynote" class="py-28 px-6 bg-black border-t border-neutral-900 relative">
+    <div class="max-w-6xl mx-auto text-center mb-12">
+      <div class="text-xs uppercase tracking-widest text-neutral-500 font-mono mb-3">Live from Cupertino-adjacent</div>
+      <h2 class="text-4xl md:text-6xl font-bold tracking-tight text-white mb-4">
+        “Today, we’re introducing our most advanced shit yet.”
+      </h2>
+      <p class="text-neutral-400 max-w-xl mx-auto text-base">
+        Millions of dollars in keynote auditorium lighting. Hundreds of hours of stage direction. One badly drawn apple.
+      </p>
+    </div>
+
+    <!-- Auditorium Image Reveal -->
+    <div class="max-w-6xl mx-auto rounded-3xl overflow-hidden border border-neutral-800 relative shadow-2xl bg-neutral-950 group">
+      <img src="images/keynote-auditorium.png" alt="AWPPLE Keynote Stage" class="w-full h-auto object-cover transform transition duration-700 group-hover:scale-[1.01]">
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 pointer-events-none"></div>
+      <div class="absolute bottom-8 left-8 right-8 flex justify-between items-end">
+        <div>
+          <span class="text-xs font-mono text-neutral-400 uppercase tracking-widest">Steve Jobs Theater (Unauthorized Parody)</span>
+          <p class="text-white text-lg font-medium mt-0.5">Auditorium Attendance: 1 Apple</p>
+        </div>
+        <div class="hidden sm:block text-right">
+          <span class="text-xs font-hand text-red-400 text-xl">"completely emotionless"</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product 01: awPhone -->
+  <section id="awphone" class="py-32 px-6 border-t border-neutral-900/80 bg-neutral-950/40 relative">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <div class="text-xs font-mono tracking-widest uppercase text-red-500 font-semibold mb-3">Hardware 01</div>
+        <h2 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-6">
+          Introducing awPhone.
+        </h2>
+        <p class="text-2xl text-neutral-300 font-light mb-4 leading-snug">
+          Our most advanced phone ever.*
+        </p>
+        <p class="text-xs text-neutral-500 italic mb-8">
+          *we say this every year.
+        </p>
+        
+        <div class="space-y-4 border-t border-neutral-900 pt-6">
+          <div class="flex items-baseline justify-between py-2 border-b border-neutral-900 group spec-line">
+            <span class="text-sm text-neutral-400">Pro Camera System</span>
+            <span class="text-sm font-medium text-white flex items-center gap-2">
+              <span class="crossed">Titanium Periscope Lens</span>
+              <span class="text-red-400 font-hand text-lg">3 circles</span>
+            </span>
+          </div>
+          <div class="flex items-baseline justify-between py-2 border-b border-neutral-900 group spec-line">
+            <span class="text-sm text-neutral-400">Finish</span>
+            <span class="text-sm font-medium text-white">Crayon on Printer Paper</span>
+          </div>
+          <div class="flex items-baseline justify-between py-2 border-b border-neutral-900 group spec-line">
+            <span class="text-sm text-neutral-400">Battery Life</span>
+            <span class="text-sm font-medium text-white">Until drawing fades</span>
+          </div>
+        </div>
+
+        <div class="mt-8 flex items-center gap-4">
+          <button onclick="shakeProduct('phone-art')" class="px-6 py-2.5 rounded-full bg-white text-black font-semibold text-xs hover:bg-neutral-200 transition">
+            Inspect Wonky Lens
+          </button>
+          <span class="text-xs text-neutral-500 font-mono">Precision uncalibrated</span>
+        </div>
+      </div>
+
+      <!-- Phone Visual Interactive Card -->
+      <div class="relative flex justify-center items-center bg-gradient-to-b from-neutral-900/30 to-black rounded-3xl p-8 border border-neutral-800/80 group">
+        <div id="phone-art" class="w-72 md:w-96 transition-transform duration-500 group-hover:rotate-1 group-hover:scale-105">
+          <img src="images/awphone.png" alt="awPhone Hardware" class="w-full h-auto object-contain filter drop-shadow-2xl">
+        </div>
+        <div class="absolute top-6 right-6 px-3 py-1 rounded-full bg-neutral-900/80 border border-neutral-700 text-[11px] font-mono text-neutral-300">
+          Weight: ~0.4g (Paper)
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product 02: awFold -->
+  <section id="awfold" class="py-32 px-6 border-t border-neutral-900 relative">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <!-- Fold Visual Interactive Card -->
+      <div class="order-2 lg:order-1 relative flex justify-center items-center bg-gradient-to-b from-neutral-900/30 to-black rounded-3xl p-8 border border-neutral-800/80 group">
+        <div id="fold-art" class="w-80 md:w-full max-w-md transition-transform duration-700 group-hover:scale-105">
+          <img src="images/awfold.png" alt="awFold Hardware" class="w-full h-auto object-contain filter drop-shadow-2xl">
+        </div>
+        <div class="absolute bottom-6 left-6 px-3 py-1 rounded-full bg-red-950/40 border border-red-900/60 text-[11px] font-hand text-red-400 text-lg">
+          "DO NOT TRY THIS WITH YOUR PHONE."
+        </div>
+      </div>
+
+      <div class="order-1 lg:order-2">
+        <div class="text-xs font-mono tracking-widest uppercase text-red-500 font-semibold mb-3">Hardware 02</div>
+        <h2 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-6">
+          We made it fold.
+        </h2>
+        <p class="text-2xl text-neutral-300 font-light mb-8 leading-snug">
+          Years of engineering were avoided.
+        </p>
+
+        <!-- Spec Grid -->
+        <div class="grid grid-cols-3 gap-4 mb-8">
+          <div class="bg-neutral-900/50 border border-neutral-800 p-4 rounded-2xl">
+            <div class="text-xs text-neutral-500 uppercase font-mono">Hinge</div>
+            <div class="text-lg font-bold text-white mt-1">probably</div>
+          </div>
+          <div class="bg-neutral-900/50 border border-neutral-800 p-4 rounded-2xl">
+            <div class="text-xs text-neutral-500 uppercase font-mono">Folds</div>
+            <div class="text-lg font-bold text-white mt-1">yes</div>
+          </div>
+          <div class="bg-neutral-900/50 border border-neutral-800 p-4 rounded-2xl">
+            <div class="text-xs text-neutral-500 uppercase font-mono">Unfolds</div>
+            <div class="text-lg font-bold text-white mt-1">also yes</div>
+          </div>
+        </div>
+
+        <p class="text-neutral-400 text-sm leading-relaxed mb-6">
+          Someone literally took an awPhone drawing and folded it violently down the middle with their thumb. The resulting crease is structural.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product 03: awTV -->
+  <section id="awtv" class="py-32 px-6 border-t border-neutral-900/80 bg-neutral-950/40 relative">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <div class="text-xs font-mono tracking-widest uppercase text-red-500 font-semibold mb-3">Hardware 03</div>
+        <h2 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-6">
+          Your biggest screen deserves worse.
+        </h2>
+        <p class="text-2xl text-neutral-300 font-light mb-6 leading-snug">
+          Everything you love.<br>
+          <span class="text-white font-medium">Now slightly wrong.</span>
+        </p>
+        <p class="text-neutral-400 text-sm leading-relaxed mb-8">
+          Features revolutionary black pencil shading technology and a crude wooden stand drawn with questionable perspective. When off: dark sketch. When on: unsettling.
+        </p>
+
+        <div class="inline-flex items-center gap-4 p-4 rounded-2xl bg-neutral-900/80 border border-neutral-800">
+          <button id="tv-toggle-btn" onclick="toggleTvScreen()" class="px-5 py-2.5 rounded-xl bg-white text-black font-semibold text-xs hover:bg-neutral-200 transition">
+            Power Remote: ON
+          </button>
+          <span id="tv-status" class="text-xs font-mono text-neutral-400">Status: Eyes dormant</span>
+        </div>
+      </div>
+
+      <!-- TV Interactive Card -->
+      <div class="relative flex justify-center items-center bg-gradient-to-b from-neutral-900/30 to-black rounded-3xl p-8 border border-neutral-800/80 group">
+        <div class="relative w-80 md:w-96">
+          <img src="images/awtv.png" alt="awTV" class="w-full h-auto object-contain filter drop-shadow-2xl">
+          <!-- Green eyes overlay on display -->
+          <div id="tv-eyes-overlay" class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 transition-opacity duration-500">
+            <div class="flex space-x-6 pb-6">
+              <div class="w-3.5 h-3.5 rounded-full bg-[#5cdb5c] shadow-[0_0_12px_#5cdb5c] border border-black"></div>
+              <div class="w-3.5 h-3.5 rounded-full bg-[#5cdb5c] shadow-[0_0_12px_#5cdb5c] border border-black"></div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute top-6 left-6 text-xs font-mono text-neutral-500">
+          Resolution: 1 Sketch
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product 04: awPods -->
+  <section id="awpods" class="py-32 px-6 border-t border-neutral-900 relative">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <!-- Pods Interactive Card -->
+      <div class="order-2 lg:order-1 relative flex justify-center items-center bg-gradient-to-b from-neutral-900/30 to-black rounded-3xl p-8 border border-neutral-800/80 group">
+        <div id="pods-container" class="relative w-80 md:w-96 cursor-pointer" onclick="triggerPodsAudio()">
+          <img src="images/awpods.png" alt="awPods" class="w-full h-auto object-contain filter drop-shadow-2xl transition duration-500 group-hover:scale-105">
+        </div>
+        <div id="pods-status-pill" class="absolute bottom-6 px-4 py-1.5 rounded-full bg-neutral-900/90 border border-neutral-700 text-xs font-mono text-green-400 shadow-xl flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+          <span>CONNECTED PROBABLY</span>
+        </div>
+      </div>
+
+      <div class="order-1 lg:order-2">
+        <div class="text-xs font-mono tracking-widest uppercase text-red-500 font-semibold mb-3">Hardware 04</div>
+        <h2 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-6">
+          Audio. Reinvented again.
+        </h2>
+        <div class="space-y-1 text-2xl text-neutral-300 font-light mb-6">
+          <p>Left.</p>
+          <p>Right.</p>
+          <p class="text-white font-medium">Probably.</p>
+        </div>
+        <p class="text-neutral-400 text-sm leading-relaxed mb-8">
+          One earbud is noticeably larger than the other. The stem is slightly crooked. Spatial Audio has been replaced with directional confusion. Fits inside both ears, though we make no guarantees about comfort.
+        </p>
+
+        <div class="p-5 rounded-2xl bg-neutral-900/50 border border-neutral-800">
+          <div class="text-xs font-mono text-neutral-400 mb-2">Acoustic Architecture</div>
+          <div class="text-sm text-neutral-200">Custom high-excursion amateur driver with zero acoustic dampening.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product 05: Awpple Intelligence -->
+  <section id="awintelligence" class="py-32 px-6 border-t border-neutral-900/80 bg-neutral-950/40 relative">
+    <div class="max-w-6xl mx-auto text-center mb-16">
+      <div class="text-xs font-mono tracking-widest uppercase text-red-500 font-semibold mb-3">Software & AI</div>
+      <h2 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-4">
+        Awpple Intelligence.
+      </h2>
+      <p class="text-2xl text-neutral-400 font-light">
+        Intelligence. Allegedly.
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto flex flex-col items-center">
+      <div class="relative w-80 md:w-96 cursor-pointer mb-8" onclick="runAiProcessing()">
+        <img src="images/awpple-intelligence.png" alt="Awpple Intelligence" class="w-full h-auto object-contain filter drop-shadow-2xl">
+      </div>
+
+      <!-- AI Console Display -->
+      <div class="w-full max-w-md bg-neutral-900/70 border border-neutral-800 rounded-2xl p-6 text-center shadow-xl backdrop-blur">
+        <div class="text-xs font-mono text-neutral-500 uppercase tracking-wider mb-2">Neural Engine Cores: 0</div>
+        <div id="ai-status-text" class="text-base font-mono text-neutral-200 font-medium h-8 flex items-center justify-center">
+          Tap AWPPLE to compute
+        </div>
+        <button onclick="runAiProcessing()" class="mt-4 px-6 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white font-medium text-xs transition border border-white/5">
+          Execute Query
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Family Ensemble Section -->
+  <section class="py-24 px-6 border-t border-neutral-900 bg-black">
+    <div class="max-w-6xl mx-auto text-center mb-10">
+      <h3 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-2">The AWPPLE Ecosystem</h3>
+      <p class="text-neutral-400 text-sm">Designed to work seamlessly together in complete disarray.</p>
+    </div>
+    <div class="max-w-5xl mx-auto rounded-3xl overflow-hidden border border-neutral-800 p-4 bg-neutral-950/60 shadow-2xl">
+      <img src="images/product-family.png" alt="AWPPLE Product Family" class="w-full h-auto object-contain">
+    </div>
+  </section>
+
+  <!-- Apple vs AWPPLE Engineering Comparison -->
+  <section class="py-32 px-6 border-t border-neutral-900 bg-neutral-950/40 relative">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <div class="text-xs font-mono tracking-widest uppercase text-neutral-500 mb-3">Methodology</div>
+        <h2 class="text-4xl md:text-6xl font-extrabold text-white">Innovation Comparison</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Apple -->
+        <div class="p-8 rounded-3xl bg-neutral-900/30 border border-neutral-800">
+          <div class="text-xs font-mono text-neutral-400 tracking-widest uppercase mb-4">Apple Engineering</div>
+          <ul class="space-y-4 text-neutral-300 text-sm">
+            <li class="flex items-center gap-3">
+              <span class="text-neutral-600">▪</span> 15+ years of micro-silicon R&D
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-neutral-600">▪</span> World-class industrial designers
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-neutral-600">▪</span> Nanometer laser fabrication
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-neutral-600">▪</span> Global multi-tier supply chain
+            </li>
+          </ul>
+        </div>
+
+        <!-- AWPPLE -->
+        <div class="p-8 rounded-3xl bg-neutral-900/60 border border-neutral-700/60 relative overflow-hidden">
+          <div class="text-xs font-mono text-red-400 tracking-widest uppercase mb-4">AWPPLE Engineering</div>
+          <ul class="space-y-4 text-neutral-200 text-sm">
+            <li class="flex items-center gap-3">
+              <span class="text-red-500">✓</span> 1 HB pencil
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-red-500">✓</span> 1 red crayon
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-red-500">✓</span> One weird apple mascot
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-red-500">✓</span> Public Wi-Fi connection
+            </li>
+          </ul>
+          <div class="mt-8 pt-6 border-t border-neutral-800 flex justify-between items-baseline">
+            <span class="text-xs font-mono text-neutral-500">Outcome:</span>
+            <span class="text-2xl font-bold tracking-tight text-white">INNOVATION.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Simple Evolution Timeline -->
+      <div class="mt-20 pt-12 border-t border-neutral-900 text-center">
+        <div class="text-xs font-mono uppercase tracking-widest text-neutral-500 mb-8">The Cultural Continuum</div>
+        <div class="flex flex-wrap items-center justify-center gap-3 md:gap-6 text-sm md:text-base font-semibold text-neutral-300">
+          <span>APPLE</span>
+          <span class="text-neutral-600">→</span>
+          <span>iPHONE</span>
+          <span class="text-neutral-600">→</span>
+          <span>KEYNOTES</span>
+          <span class="text-neutral-600">→</span>
+          <span>INTERNET OBSESSION</span>
+          <span class="text-neutral-600">→</span>
+          <span class="text-white">AWPPLE</span>
+        </div>
+        <div class="mt-4 font-hand text-red-400 text-2xl">
+          “close enough.”
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- "One more thing..." & $AWPPLE Section -->
+  <section id="token" class="py-36 px-6 border-t border-neutral-900 bg-black relative text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-sm font-serif italic text-neutral-400 mb-6">
+        “One more thing.”
+      </div>
+      <h2 class="text-6xl md:text-8xl font-black tracking-tight text-white mb-4">
+        $AWPPLE
+      </h2>
+      <p class="text-xl md:text-2xl text-neutral-400 max-w-xl mx-auto mb-10">
+        Apple has shareholders. <br>
+        <span class="text-white font-medium">AWPPLE has holders.</span>
+      </p>
+
+      <div class="max-w-2xl mx-auto text-neutral-400 text-sm leading-relaxed mb-12">
+        Every keynote creates worldwide attention. Every product release drives cultural conversation. 
+        Traditional stocks represent the multi-trillion dollar company; $AWPPLE represents the unfiltered internet collective having fun with it.
+      </div>
+
+      <!-- CA Section with Copy Function -->
+      <div class="max-w-xl mx-auto bg-neutral-900/60 border border-neutral-800 rounded-3xl p-8 backdrop-blur shadow-2xl">
+        <div class="text-xs font-mono text-neutral-500 uppercase tracking-wider mb-1">
+          Designed in California. Deployed somewhere else.
+        </div>
+        <div class="text-xs font-mono text-neutral-400 uppercase tracking-widest mb-4">
+          Contract Address
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center gap-3 bg-black/80 border border-neutral-800 rounded-2xl p-2.5">
+          <input id="ca-input" type="text" readonly value="AWPPL3x9Z7kQv2M1a8B4cE5pT0rYdF6gHjK9mN2s" class="w-full bg-transparent text-center sm:text-left px-3 text-xs md:text-sm font-mono text-neutral-300 focus:outline-none select-all">
+          <button id="copy-ca-btn" onclick="copyContractAddress()" class="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-white text-black font-bold text-xs hover:bg-neutral-200 transition shrink-0">
+            COPY CA
+          </button>
+        </div>
+        <div id="copy-toast" class="text-xs font-mono text-green-400 mt-3 opacity-0 transition-opacity">
+          ✓ Copied to clipboard
+        </div>
+      </div>
+
+      <!-- Only Twitter / X link -->
+      <div class="mt-12 flex justify-center">
+        <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 rounded-full bg-neutral-900 border border-neutral-800 text-white font-medium text-sm hover:bg-neutral-800 transition flex items-center gap-2.5 shadow-xl">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <span>Join the Keynote on X / Twitter</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final Outro Section -->
+  <footer class="py-24 px-6 border-t border-neutral-900 bg-black text-center text-xs text-neutral-600">
+    <div class="max-w-4xl mx-auto flex flex-col items-center">
+      <div class="w-12 h-12 mb-6 opacity-40 hover:opacity-100 transition">
+        <img src="images/awpple-mascot.png" alt="AWPPLE small mark" class="w-full h-full object-contain">
+      </div>
+      <p class="text-sm font-medium text-neutral-400 mb-2">Think differenter.</p>
+      <p class="max-w-md mx-auto mb-6 text-neutral-500">
+        Apple has the keynote. We have AWPPLE. A tribute to internet folklore, wonky keynotes, and fruit-based engineering.
+      </p>
+      <div class="flex items-center space-x-6 text-neutral-500 font-mono">
+        <span>© 2025 AWPPLE Inc.</span>
+        <span>•</span>
+        <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">X / Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Copy CA interaction
+    function copyContractAddress() {
+      const input = document.getElementById('ca-input');
+      navigator.clipboard.writeText(input.value).then(() => {
+        const btn = document.getElementById('copy-ca-btn');
+        const toast = document.getElementById('copy-toast');
+        btn.innerText = 'COPIED';
+        btn.classList.add('bg-green-400', 'text-black');
+        toast.style.opacity = '1';
+        setTimeout(() => {
+          btn.innerText = 'COPY CA';
+          btn.classList.remove('bg-green-400');
+          toast.style.opacity = '0';
+        }, 2200);
+      });
+    }
+
+    // Interactive TV Remote Screen
+    let tvOn = false;
+    function toggleTvScreen() {
+      tvOn = !tvOn;
+      const eyes = document.getElementById('tv-eyes-overlay');
+      const btn = document.getElementById('tv-toggle-btn');
+      const status = document.getElementById('tv-status');
+      if (tvOn) {
+        eyes.style.opacity = '1';
+        btn.innerText = 'Power Remote: OFF';
+        status.innerText = 'Status: Green eyes staring back';
+        status.classList.add('text-green-400');
+      } else {
+        eyes.style.opacity = '0';
+        btn.innerText = 'Power Remote: ON';
+        status.innerText = 'Status: Eyes dormant';
+        status.classList.remove('text-green-400');
+      }
+    }
+
+    // AI Processing Interaction
+    const aiResponses = [
+      "PROCESSING...",
+      "QUERYING 0 NEURONS...",
+      "thought about it.",
+      "no thoughts found."
+    ];
+    let aiStep = 0;
+    function runAiProcessing() {
+      const status = document.getElementById('ai-status-text');
+      status.innerText = "PROCESSING...";
+      setTimeout(() => {
+        status.innerText = "PROCESSING...";
+        setTimeout(() => {
+          status.innerText = "thought about it.";
+          setTimeout(() => {
+            status.innerText = "“no thoughts found.”";
+          }, 1000);
+        }, 900);
+      }, 700);
+    }
+
+    // Interactive awPods tap
+    function triggerPodsAudio() {
+      const pill = document.getElementById('pods-status-pill');
+      pill.innerHTML = '<span class="w-2 h-2 rounded-full bg-red-500"></span><span>LEFT EARBUD SLIGHTLY LARGER</span>';
+      setTimeout(() => {
+        pill.innerHTML = '<span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span><span>CONNECTED PROBABLY</span>';
+      }, 2500);
+    }
+
+    // Interactive phone wobble
+    function shakeProduct(id) {
+      const el = document.getElementById(id);
+      el.classList.add('animate-bounce');
+      setTimeout(() => el.classList.remove('animate-bounce'), 800);
+    }
+  </script>
+</body>
+</html>
